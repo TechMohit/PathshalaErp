@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "738074916809",
+    "firebase_url": "https://patashalaerp-4148d.firebaseio.com",
+    "project_id": "patashalaerp-4148d",
+    "storage_bucket": "patashalaerp-4148d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738074916809:android:1125a7c8ee64c49d",
+        "android_client_info": {
+          "package_name": "in.varadhismartek.pathshalaerp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738074916809-c4cqu9rn5odofkfc2nmouimeoetrl6bo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.varadhismartek.pathshalaerp",
+            "certificate_hash": "9d2b1c47b8c0aa70c26386a3c29dce756b0d7af2"
+          }
+        },
+        {
+          "client_id": "738074916809-4ovmqhba0ku5vu3hff6lippkecginio6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7__2OF2w8cYYsXwvnurSm_ybTSrOJq00"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738074916809-4ovmqhba0ku5vu3hff6lippkecginio6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/change_address"
+        android:background="@color/colorPrimary"
+        android:textSize="@dimen/text20sp"
+        android:textColor="@color/whitecolor"
+        android:padding="5dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/mar_padd_5dp">
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/TextInputLayout"
+        app:hintTextAppearance="@style/TextLabel">
+
+        <EditText
+            android:id="@+id/changed_present_address"
+            style="@style/EditTextStyle"
+            android:inputType="textMultiLine"
+            android:hint="@string/present_street"
+            android:textSize="@dimen/text17sp"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/TextInputLayout"
+            app:hintTextAppearance="@style/TextLabel"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+
+            <EditText
+                android:id="@+id/changed_pincode"
+                style="@style/EditTextStyle"
+                android:hint="@string/pincode"
+                android:inputType="number"
+                android:maxLength="6"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/TextInputLayout"
+            app:hintTextAppearance="@style/TextLabel"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+
+            <EditText
+                android:id="@+id/changed_city"
+                style="@style/EditTextStyle"
+                android:hint="@string/city"
+                android:digits="@string/alphabet"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/TextInputLayout"
+            app:hintTextAppearance="@style/TextLabel"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+
+            <EditText
+                android:id="@+id/changed_state"
+                style="@style/EditTextStyle"
+                android:hint="@string/state"
+                android:digits="@string/alphabet"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/TextInputLayout"
+            app:hintTextAppearance="@style/TextLabel"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+
+            <EditText
+                android:id="@+id/changed_country"
+                style="@style/EditTextStyle"
+                android:hint="@string/country"
+                android:digits="@string/alphabet"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSaveChangedAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/save"
+            android:textColor="@color/whitecolor"
+            android:background="@color/colorPrimary"
+            android:layout_margin="@dimen/mar_padd_5dp"/>
+    </LinearLayout>
+
+</LinearLayout>

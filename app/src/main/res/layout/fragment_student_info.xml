@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ScrollViewStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       style="@style/LinearLayoutStyle"
+        android:orientation="vertical">
+
+        <include layout="@layout/stdudent_info_layout"/>
+
+        <LinearLayout
+            style="@style/LinearLayoutStyle"
+            android:orientation="vertical"
+            android:id="@+id/headLayout">
+
+            <LinearLayout
+                style="@style/LinearLayoutStyle"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    style="@style/LinearlayoutWeightStyle"
+                    android:layout_weight="0.7"
+                    android:layout_margin="@dimen/mar_padd_10dp"
+                    android:gravity="center">
+
+                    <in.varadhismartek.pathshalaerp.CircleImageView
+                        style="@style/CircleImageViewStyle"
+                        android:id="@+id/studentImage"
+                        android:layout_gravity="center"
+                        android:background="@drawable/attach1"
+                        android:layout_marginTop="@dimen/mar_padd_5dp"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/LinearlayoutWeightStyle"
+                    android:layout_margin="@dimen/mar_padd_5dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <Spinner
+                        style="@style/SpinnerStyleA"
+                        android:id="@+id/spinnerForClass"
+                        android:background="@drawable/custom_spinner_background"
+                        />
+
+                    <Spinner
+                        style="@style/SpinnerStyleA"
+                        android:id="@+id/spinnerForSection"
+                        android:layout_marginTop="@dimen/mar_padd_5dp"
+                        android:background="@drawable/custom_spinner_background"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                app:cardElevation="@dimen/mar_padd_5dp"
+                app:cardCornerRadius="@dimen/mar_padd_5dp">
+
+                <LinearLayout
+                    style="@style/LinearLayoutStyle"
+                    android:orientation="vertical"
+                    android:padding="@dimen/mar_padd_5dp">
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="vertical"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout">
+
+                            <EditText
+                                android:id="@+id/editText_student_name"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/first_name"
+                                android:inputType="textCapSentences"
+                                android:maxLength="20"
+                                android:digits="@string/alphabet"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout">
+
+                            <EditText
+                                android:id="@+id/editText_student_middle_name"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/middle_name"
+                                android:inputType="text"
+                                android:maxLength="20"
+                                android:digits="@string/alphabet"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout">
+
+                            <EditText
+                                android:id="@+id/editText_student_last_name"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/last_name"
+                                android:maxLength="20"
+                                android:inputType="textCapSentences"
+                                android:digits="@string/alphabet"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_weight="1"
+                            android:layout_width="0dp">
+
+                            <EditText
+                                android:id="@+id/editText_student_dob"
+                                style="@style/EditTextStyle"
+                                android:inputType="number"
+                                android:hint="@string/select_date_of_birth"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageView
+                            style="@style/ImageviewStyle"
+                            android:id="@+id/calendar"
+                            android:layout_width="@dimen/textLayoutHeight"
+                            android:layout_height="@dimen/textLayoutHeight"
+                            android:src="@drawable/ic_calendar"
+                            android:visibility="visible"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/calendarfordob" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            style="@style/TextViewStyle1"
+                            android:text="@string/gender"
+                            android:layout_width="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorgreen"
+                            android:layout_margin="@dimen/mar_padd_1dp"
+                            android:layout_gravity="center"/>
+
+
+                        <Button
+                            style="@style/buttonStyle"
+                            android:id="@+id/gendergirl"
+                            android:background="@android:color/transparent"
+                            android:text="@string/girl"
+                            android:layout_gravity="center"
+                            android:textColor="@color/hintColor"/>
+
+                        <Button
+                            style="@style/buttonStyle"
+                            android:id="@+id/genderboy"
+                            android:background="@android:color/transparent"
+                            android:text="@string/boy"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/mar_padd_2dp"
+                            android:textColor="@color/hintColor"/>
+
+                        <Button
+                            style="@style/buttonStyle"
+                            android:id="@+id/genderother"
+                            android:background="@android:color/transparent"
+                            android:layout_gravity="center"
+                            android:textColor="@color/hintColor"
+                            android:text="@string/other"
+                            android:layout_marginStart="@dimen/mar_padd_2dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <LinearLayout
+                            style="@style/LinearlayoutWeightStyle"
+                            android:layout_weight="0.8"
+                            android:gravity="center">
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/editText_aadharNumber_student"
+                                    style="@style/EditTextStyle"
+                                    android:hint="@string/id_aadhar_number"
+                                    android:inputType="textCapCharacters"
+                                    android:digits="@string/alphabetNumeric"
+                                    tools:ignore="TextFields"
+                                    android:maxLength="12"/>
+
+                            </android.support.design.widget.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/LinearlayoutWeightStyle"
+                            android:layout_weight="0.5"
+                            android:gravity="center">
+
+                            <android.support.v7.widget.CardView
+                               style="@style/cardViewStyleA">
+
+                                <ImageView
+                                    android:id="@+id/studentIdImageFrontClick"
+                                    android:layout_width="@dimen/dimen40dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:src="@drawable/attach2"
+                                    android:visibility="visible"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+
+                                <ImageView
+                                    android:id="@+id/studentIdImageFront"
+                                    android:layout_width="@dimen/dimen70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:visibility="gone"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/cardViewAadharIdNumber"
+                                android:layout_width="@dimen/dimen50dp"
+                                android:layout_height="@dimen/dimen70dp"
+                                android:layout_margin="@dimen/mar_padd_10dp"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:id="@+id/studentIdImageBackClick"
+                                    android:layout_width="@dimen/dimen40dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:src="@drawable/attach2"
+                                    android:visibility="visible"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+                                <ImageView
+                                    android:id="@+id/studentIdImageBack"
+                                    android:layout_width="@dimen/dimen70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:visibility="gone"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+                            </android.support.v7.widget.CardView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:gravity="center">
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/editText_student_birth_certificate_num"
+                                    style="@style/EditTextStyle"
+                                    android:inputType="textCapCharacters"
+                                    android:hint="@string/birth_certificate_number"
+                                    android:digits="@string/alphabetNumeric"
+                                    android:maxLength="11"/>
+
+                            </android.support.design.widget.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/LinearlayoutWeightStyle"
+                            android:layout_weight="0.5"
+                            android:gravity="center">
+
+                            <android.support.v7.widget.CardView
+                                style="@style/cardViewStyleA">
+
+                                <ImageView
+                                    android:id="@+id/studentBirthCertificateImageFrontClick"
+                                    android:layout_width="@dimen/dimen40dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:src="@drawable/attach2"
+                                    android:visibility="visible"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+
+                                <ImageView
+                                    android:id="@+id/studentBirthCertificateImageFront"
+                                    android:layout_width="@dimen/dimen70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:visibility="gone"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+                            </android.support.v7.widget.CardView>
+
+
+                            <android.support.v7.widget.CardView
+                                style="@style/cardViewStyleA"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:id="@+id/studentBirthCertificateImageBackClick"
+                                    android:layout_width="@dimen/dimen40dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:src="@drawable/attach2"
+                                    android:visibility="visible"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+
+                                <ImageView
+                                    android:id="@+id/studentBirthCertificateImageBack"
+                                    android:layout_width="@dimen/dimen70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:visibility="gone"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+                            </android.support.v7.widget.CardView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/editText_religion"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/select_religion"
+                                android:inputType="textCapSentences"
+                                android:maxLength="20"
+                                android:digits="@string/alphabet"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/editText_nationality"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/nationality"
+                                android:inputType="textCapSentences"
+                                android:digits="@string/alphabet"
+                                android:maxLength="20"
+                                />
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen70dp"
+                        android:padding="@dimen/mar_padd_2dp"
+                        android:baselineAligned="false">
+
+
+                        <LinearLayout
+                            style="@style/LinearlayoutWeightStyle"
+                            android:layout_weight="1.5">
+
+                            <Spinner
+                                style="@style/SpinnerStyleA"
+                                android:background="@drawable/custom_spinner_background"
+                                android:id="@+id/spinnerForCommunity"
+                                android:layout_gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/LinearlayoutWeightStyle">
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/editText_caste"
+                                    style="@style/EditTextStyle"
+                                    android:hint="@string/caste"
+                                    android:inputType="textCapSentences"
+                                    android:digits="@string/alphabetSpace"
+                                    android:maxLength="15"
+
+                                    />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/LinearlayoutWeightStyle">
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/TextInputLayout"
+                                android:layout_width="match_parent">
+
+                                <EditText
+                                    android:id="@+id/editText_subcaste"
+                                    style="@style/EditTextStyle"
+                                    android:hint="@string/subcaste"
+                                    android:inputType="textCapSentences"
+                                    android:maxLength="15"
+                                    android:digits="@string/alphabetSpace"/>
+
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/editText_language_known"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/language_known"
+                                android:inputType="textCapSentences"
+                                android:maxLength="20"
+                                android:digits="@string/alphabetSpace"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/editText_mother_tounge"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/mother_tongue"
+                                android:inputType="textCapSentences"
+                                android:maxLength="20"
+                                android:digits="@string/alphabet"/>
+
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/siblingLayout"
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/addSiblings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:drawableStart="@drawable/ic_add_black_24dp"
+                            android:text="@string/add_siblings"
+                            android:textColor="@color/whitecolor"
+                            android:padding="@dimen/mar_padd_5dp"
+                            android:layout_margin="@dimen/mar_padd_5dp"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                app:cardCornerRadius="@dimen/mar_padd_5dp"
+                app:cardElevation="@dimen/mar_padd_5dp">
+
+
+                <RelativeLayout
+                    style="@style/RelativeLayoutStyle"
+                    android:id="@+id/academicInfoLayoutClick">
+
+                    <TextView
+                        android:id="@+id/student_admissionTextView"
+                        style="@style/TextViewStyle1"
+                        android:text="@string/academic_information"
+                        android:textSize="@dimen/text20sp"
+                        android:layout_height="@dimen/dimen40dp"
+                        android:background="@color/colorPrimary"
+                        android:textColor="@color/whitecolor"/>
+
+                    <ImageView
+                        android:id="@+id/btnimageViewDownForAcademicInfo"
+                        style="@style/ImageviewStyle"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_expand_more_black_24dp"
+                        android:contentDescription="@string/imageforshowview"/>
+
+                    <ImageView
+                        android:id="@+id/btnimageViewUpForAcademicInfo"
+                        style="@style/ImageviewStyle"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_expand_less_black_24dp"
+                        android:contentDescription="@string/imageforshowview"/>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    style="@style/LinearLayoutStyle"
+                    android:id="@+id/layoutForAcademicInfo"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/dimen40dp"
+                    android:padding="@dimen/mar_padd_5dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/editText_previous_school_name"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/previous_school_name"
+                            android:inputType="textCapSentences"
+                            android:maxLength="50"
+                            android:digits="@string/alphabetSpace"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/editText_previous_school_address"
+                            style="@style/EditTextStyle"
+                            android:inputType="textCapSentences"
+                            android:hint="@string/previous_school_address"
+                            android:maxLength="20"
+                            android:digits="@string/alphabetSpace"
+                            tools:ignore="TooManyViews" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            style="@style/TextViewStyle1"
+                            android:text="@string/previous_school_affliated_to"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorgreen"/>
+
+                        <Button
+                            style="@style/buttonStyle"
+                            android:id="@+id/affiliated_SSLC"
+                            android:layout_width="@dimen/dimens60"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/hintColor"
+                            android:text="@string/sslc"/>
+
+                        <Button
+                            style="@style/buttonStyle"
+                            android:id="@+id/affiliated_CBSE"
+                            android:layout_width="@dimen/dimens60"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/hintColor"
+                            android:text="@string/cbse"
+                            android:layout_marginStart="@dimen/mar_padd_2dp"/>
+
+                        <Button
+                            style="@style/buttonStyle"
+                            android:id="@+id/affiliated_ICSE"
+                            android:layout_width="@dimen/dimens60"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/hintColor"
+                            android:text="@string/icse"
+                            android:layout_marginStart="@dimen/mar_padd_2dp"/>
+
+                        <Button
+                            style="@style/buttonStyle"
+                            android:id="@+id/affiliated_OTHER"
+                            android:layout_width="@dimen/dimens60"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/hintColor"
+                            android:text="@string/other"
+                            android:layout_marginStart="@dimen/mar_padd_2dp"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <LinearLayout
+                            style="@style/LinearlayoutWeightStyle"
+                            android:layout_weight="0.8"
+                            android:gravity="center">
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/TextInputLayout"
+                                android:gravity="center">
+
+                                <EditText
+                                    android:id="@+id/editText_transfer_certificate"
+                                    style="@style/EditTextStyle"
+                                    android:inputType="numberDecimal|numberSigned"
+                                    android:hint="@string/transfer_certificate_number"
+                                    android:maxLength="10"/>
+
+                            </android.support.design.widget.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/LinearlayoutWeightStyle"
+                            android:layout_weight="0.5">
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="@dimen/dimen50dp"
+                                android:layout_height="@dimen/dimen70dp"
+                                android:layout_margin="@dimen/mar_padd_10dp">
+
+                                <ImageView
+                                    android:id="@+id/studentTCImageFrontClick"
+                                    android:layout_width="@dimen/dimen40dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:src="@drawable/attach2"
+                                    android:visibility="visible"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+
+                                <ImageView
+                                    android:id="@+id/studentTCImageFront"
+                                    android:layout_width="@dimen/dimen70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:visibility="gone"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+                            </android.support.v7.widget.CardView>
+
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="@dimen/dimen50dp"
+                                android:layout_height="@dimen/dimen70dp"
+                                android:layout_margin="@dimen/mar_padd_10dp">
+
+                                <ImageView
+                                    android:id="@+id/studentTCImageBackClick"
+                                    android:layout_width="@dimen/dimen40dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:src="@drawable/attach2"
+                                    android:visibility="visible"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+                                <ImageView
+                                    android:id="@+id/studentTCImageBack"
+                                    android:layout_width="@dimen/dimen70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:visibility="gone"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+                            </android.support.v7.widget.CardView>
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false"
+                        >
+
+                        <LinearLayout
+                            style="@style/LinearlayoutWeightStyle"
+                            android:layout_weight="0.8"
+                            android:gravity="center">
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/TextInputLayout">
+                                <EditText
+                                    android:id="@+id/student_previous_marksheet"
+                                    style="@style/EditTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="numberSigned|numberDecimal"
+                                    android:hint="@string/attach_previous_school_marksheet"
+                                    android:layout_gravity="center"
+                                    android:maxLength="15"
+                                    android:digits="@string/alphabetNumeric"/>
+
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/LinearlayoutWeightStyle"
+                            android:layout_weight="0.5"
+                            android:layout_height="match_parent"
+                            >
+
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="@dimen/dimen50dp"
+                                android:layout_height="@dimen/dimen70dp"
+                                android:layout_margin="@dimen/mar_padd_10dp">
+
+                                <ImageView
+                                    android:id="@+id/marksheetFrontClick"
+                                    android:layout_width="@dimen/dimen40dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:src="@drawable/attach2"
+                                    android:visibility="visible"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+
+                                <ImageView
+                                    android:id="@+id/marksheetFront"
+                                    android:layout_width="@dimen/dimen70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:visibility="gone"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+                            </android.support.v7.widget.CardView>
+
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="@dimen/dimen50dp"
+                                android:layout_height="@dimen/dimen70dp"
+                                android:layout_margin="@dimen/mar_padd_10dp">
+
+                                <ImageView
+                                    android:id="@+id/marksheetBackClick"
+                                    android:layout_width="@dimen/dimen40dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:src="@drawable/attach2"
+                                    android:visibility="visible"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+                                <ImageView
+                                    android:id="@+id/marksheetBack"
+                                    android:layout_width="@dimen/dimen70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/whitecolor"
+                                    android:visibility="gone"
+                                    android:layout_gravity="center"
+                                    tools:ignore="ContentDescription" />
+
+                            </android.support.v7.widget.CardView>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/editText_previousClass"
+                                style="@style/EditTextStyle"
+                                android:inputType="textCapCharacters"
+                                android:digits="@string/alphabetNumeric1"
+                                android:hint="@string/previous_class"
+                                android:maxLength="15"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/editText_previous_class_percentage"
+                                style="@style/EditTextStyle"
+                                android:inputType="numberDecimal|numberSigned"
+                                android:hint="@string/previous_class_or_grade"
+                                android:maxLength="5"
+
+                                />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/editText_previous_school_contact"
+                                style="@style/EditTextStyle"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:hint="@string/previous_school_contact_number"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                android:layout_margin="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/medicalInfoLayoutClick"
+                    style="@style/RelativeLayoutStyle">
+
+                    <TextView
+                        style="@style/TextViewStyle1"
+                        android:text="@string/medical_info"
+                        android:textSize="@dimen/text20sp"
+                        android:layout_height="@dimen/dimen40dp"
+                        android:background="@color/colorPrimary"
+                        android:textColor="@color/whitecolor"/>
+
+                    <ImageView
+                        android:id="@+id/btnimageViewDownForMedicalInfo"
+                        style="@style/ImageviewStyle"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_touch_app_black_24dp"
+                        android:contentDescription="@string/imageforshowview" />
+
+                    <ImageView
+                        android:id="@+id/btnimageViewUpForMedicalInfo"
+                        style="@style/ImageviewStyle"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_arrow_drop_up_black_24dp"
+                        android:visibility="gone"
+
+                        android:contentDescription="@string/imageforshowview"/>
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/btnStudentInfoFinalSubmit"
+                style="@style/ButtonStyleWithColorChange"
+                android:background="@drawable/button_design"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:text="@string/submit"
+                android:textColor="@color/whitecolor"
+                android:layout_margin="@dimen/mar_padd_10dp"
+                tools:ignore="TooManyViews" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+

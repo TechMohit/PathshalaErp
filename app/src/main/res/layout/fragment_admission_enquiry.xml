@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+ <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:gravity="center"
+     android:orientation="vertical"
+     android:paddingLeft="10dp"
+     android:paddingRight="10dp"
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     tools:ignore="ScrollViewSize">
+
+  <ImageView
+      android:id="@+id/logo"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_gravity="center"
+      android:background="@drawable/ic_managment"
+      android:contentDescription="@string/logo" />
+
+
+  <android.support.design.widget.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+   <EditText
+       android:id="@+id/editText_admissionNumber"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="@string/admission_number"
+       android:layout_gravity="center"
+       android:inputType="textCapCharacters"
+       android:textColorHint="@color/hintColor"
+       android:textColor="@color/textColor"
+       tools:ignore="TextFields" />
+
+  </android.support.design.widget.TextInputLayout>
+
+
+  <android.support.design.widget.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+   <EditText
+       android:id="@+id/editText_percentage_for_admission"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="@string/enter_minimum_required_for_admission"
+       android:layout_gravity="center"
+       android:textColorHint="@color/hintColor"
+       android:textColor="@color/textColor"
+       android:maxLength="5"
+       android:inputType="numberDecimal|numberDecimal"/>
+
+  </android.support.design.widget.TextInputLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_marginTop="5dp">
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="30dp"
+       android:text="@string/qualification"
+       android:background="@color/colorPrimary"
+       android:layout_gravity="center"
+       android:gravity="center"
+       android:textSize="17sp"
+       android:textColor="@color/whitecolor"/>
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center"
+       android:baselineAligned="false"
+       android:layout_marginTop="@dimen/mar_padd_10dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/father"
+         android:layout_gravity="center"
+         android:textSize="15sp"
+         android:textColor="@color/textColor"/>
+
+     <Spinner
+         android:background="@drawable/custom_spinner_background"
+         android:spinnerMode="dropdown"
+         android:id="@+id/spinnerCustomForFather"
+         android:layout_gravity="center"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp">
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/mother"
+         android:layout_gravity="center"
+         android:textSize="15sp"
+         android:textColor="@color/textColor"/>
+
+     <Spinner
+         android:background="@drawable/custom_spinner_background"
+         android:spinnerMode="dropdown"
+         android:id="@+id/spinnerCustomForMother"
+         android:layout_gravity="center"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         />
+    </LinearLayout>
+
+   </LinearLayout>
+
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="30dp"
+       android:text="@string/facility"
+       android:layout_gravity="center"
+       android:gravity="center"
+       android:textSize="17sp"
+       android:background="@color/colorPrimary"
+       android:layout_marginTop="5dp"
+       android:textColor="@color/whitecolor"/>
+
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="1dp"
+       android:layout_marginTop="5dp"
+       android:background="@color/textColor"/>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/checkbox_food_facility"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="@string/food"
+        android:layout_weight="1"
+        android:textColor="@color/textColor"/>
+
+    <CheckBox
+        android:id="@+id/checkbox_transport_facility"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="@string/transport"
+        android:layout_weight="1"
+        android:textColor="@color/textColor"
+        android:layout_marginEnd="5dp"/>
+
+   </LinearLayout>
+
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="1dp"
+       android:background="@color/textColor"/>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center"
+       android:layout_marginTop="@dimen/mar_padd_5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/guardians"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:textColorHint="@color/textColor"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_border"
+        android:padding="2dp">
+
+     <Button
+         android:id="@+id/button_decrease_count"
+         android:layout_width="30dp"
+         android:layout_height="30dp"
+         android:text="@string/decrease"
+         android:gravity="center"
+         android:textSize="21sp"
+         android:textColor="@color/whitecolor"
+         android:background="@color/colorPrimary"
+         />
+
+     <TextView
+         android:id="@+id/numberOfGuardians"
+         android:layout_width="30dp"
+         android:layout_height="30dp"
+         android:text="@string/_1"
+         android:gravity="center"
+         android:background="#fff"
+         android:textSize="21sp"
+         android:textColor="#ec6117"
+         android:inputType="number"
+         tools:ignore="LabelFor,TextViewEdits" />
+     <Button
+         android:id="@+id/button_increase_count"
+         android:layout_width="30dp"
+         android:layout_height="30dp"
+         android:text="@string/increase"
+         android:gravity="center"
+         android:textSize="21sp"
+         android:background="@color/colorPrimary"
+         android:textColor="@color/whitecolor"/>
+
+    </LinearLayout>
+   </LinearLayout>
+
+
+
+   <Button
+       android:layout_marginTop="20dp"
+       android:id="@+id/btnNext"
+       android:layout_width="match_parent"
+       android:layout_height="30dp"
+       android:background="@drawable/button_design"
+       android:layout_gravity="center"
+       android:text="@string/next"
+       android:textColor="@color/whitecolor"
+       android:textSize="15sp"
+       android:layout_marginBottom="@dimen/mar_padd_10dp"/>
+  </LinearLayout>
+
+ </LinearLayout>
+</ScrollView>
+

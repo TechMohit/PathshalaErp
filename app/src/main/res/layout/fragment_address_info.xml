@@ -1,0 +1,308 @@
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ScrollViewStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/LinearLayoutStyle"
+        android:orientation="vertical">
+
+        <include layout="@layout/stdudent_info_layout"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/mar_padd_5dp"
+            app:cardElevation="5dp"
+            android:layout_margin="@dimen/mar_padd_5dp">
+
+            <LinearLayout
+                style="@style/LinearLayoutStyle"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    style="@style/TextViewStyle1"
+                    android:text="@string/parent_address"
+                    android:textSize="@dimen/text20sp"
+                    android:textColor="@color/whitecolor"
+                    android:background="@color/colorPrimary"/>
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/parent_present_address"
+                        style="@style/EditTextStyle"
+                        android:hint="@string/present_street"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!--<android.support.design.widget.TextInputLayout
+                    style="@style/TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/parent_present_locality_name"
+                        style="@style/EditTextStyle"
+                        android:hint="@string/locality_name"
+                        android:inputType="textCapSentences"
+                        android:digits="@string/alphabetSpace"/>
+
+                </android.support.design.widget.TextInputLayout>-->
+
+                <LinearLayout
+                    style="@style/LinearLayoutStyle"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/parent_present_pincode"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/pincode"
+                            android:inputType="number"
+                            android:maxLength="6"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout"
+                        android:layout_weight="1"
+                        tools:ignore="NestedWeights">
+
+                        <EditText
+                            android:id="@+id/parent_present_city"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/city"
+                            android:inputType="textCapSentences"
+                            android:digits="@string/alphabetSpace"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/LinearLayoutStyle"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/parent_present_state"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/state"
+                            android:inputType="textCapSentences"
+                            android:digits="@string/alphabetSpace"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/parent_present_country"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/country"
+                            android:inputType="textCapSentences"
+                            android:digits="@string/alphabet"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/parent_present_contact_number"
+                        android:inputType="number"
+                        style="@style/EditTextStyle"
+                        android:hint="@string/contact_number"
+                        android:maxLength="10"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/checkBoxAddressSameOrNot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/same_as_present_address"
+                    android:textColor="@color/hintColor"/>
+
+                <LinearLayout
+
+                    android:id="@+id/layoutPermanentAddress"
+                    style="@style/LinearLayoutStyle"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/parent_permanent_address"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/permanent_street"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                   <!-- <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/parent_permanent_locality_name"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/locality_name"
+                            android:inputType="textCapSentences"
+                            android:digits="@string/alphabetSpace"/>
+
+                    </android.support.design.widget.TextInputLayout>-->
+
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/parent_permanent_pincode"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/permanent"
+                                android:inputType="number"
+                                android:maxLength="6"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/parent_permanent_city"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/permanent_city"
+                                android:inputType="textCapSentences"
+                                android:digits="@string/alphabetSpace"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/parent_permanent_state"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/permanent_state"
+                                android:inputType="textCapSentences"
+                                android:digits="@string/alphabetSpace"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/parent_permanent_country"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/permanent_country"
+                                android:inputType="textCapSentences"
+                                android:digits="@string/alphabet"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/parent_permanent_contact_number"
+                            android:inputType="number"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/permanent_contact_number"
+                            android:maxLength="10"/>
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/mar_padd_5dp"
+            app:cardCornerRadius="@dimen/mar_padd_5dp"
+            android:layout_margin="@dimen/mar_padd_5dp">
+
+            <LinearLayout
+                style="@style/LinearLayoutStyle">
+
+                <TextView
+                    style="@style/TextViewStyle1"
+                    android:text="@string/guardian_address"
+                    android:textSize="@dimen/text20sp"
+                    android:textColor="@color/whitecolor"
+                    android:background="@color/colorPrimary"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_for_guardianAddress"
+                style="@style/LinearLayoutStyle"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp">
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+        <Button
+           android:id="@+id/btnAddressFinalSubmit"
+           style="@style/buttonStyle"
+           android:background="@drawable/button_design"
+           android:layout_gravity="center"
+           android:layout_width="match_parent"
+           android:text="@string/submit"
+           android:textColor="@color/whitecolor"
+           android:layout_margin="10dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/GuardianNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/guardian"
+        android:textSize="@dimen/text20sp"/>
+
+    <in.varadhismartek.pathshalaerp.CircleImageView
+        android:id="@+id/guardianProfilePicture"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/attach2"/>
+
+    <android.support.design.widget.TextInputLayout
+       style="@style/TextInputLayout">
+
+        <EditText
+            android:id="@+id/guardianName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/guardian_name"
+            android:maxLength="40"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/mobileNumberguardian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/mobile_number"
+            android:inputType="number"
+            android:maxLength="10"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/emailGuardian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/guardian_email"
+            android:maxLength="40"
+            android:inputType="textEmailAddress"
+            android:digits="@string/email"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <LinearLayout
+        style="@style/LinearLayoutStyle"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            style="@style/LinearlayoutWeightStyle"
+            android:layout_weight="0.8"
+            android:gravity="center">
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/TextInputLayout">
+                <EditText
+                    android:id="@+id/guardian_aadhar_card"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number|numberSigned"
+                    android:hint="@string/aadhar_card_number"
+                    android:layout_gravity="center"
+                    android:maxLength="12"
+
+                    />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearlayoutWeightStyle"
+            android:layout_weight="0.5"
+            android:gravity="center">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="@dimen/dimen50dp"
+                android:layout_height="70dp"
+                android:layout_margin="@dimen/mar_padd_10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/guardianAadharCardImageFrontClick"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/whitecolor"
+                    android:src="@drawable/attach2"
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/guardianAadharCardImageFront"
+                    android:layout_width="@dimen/dimen70dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/whitecolor"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    tools:ignore="ContentDescription" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="@dimen/dimen50dp"
+                android:layout_height="70dp"
+                android:layout_margin="@dimen/mar_padd_10dp">
+
+                <ImageView
+                    android:id="@+id/guardianAadharCardImageBackClick"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/whitecolor"
+                    android:src="@drawable/attach2"
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    tools:ignore="ContentDescription" />
+
+
+                <ImageView
+                    android:id="@+id/guardianAadharCardImageBack"
+                    android:layout_width="@dimen/dimen70dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/whitecolor"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    tools:ignore="ContentDescription" />
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LinearLayoutStyle"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            style="@style/LinearlayoutWeightStyle"
+            android:layout_weight="0.8"
+            android:gravity="center">
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/TextInputLayout">
+                <EditText
+                    android:id="@+id/guardian_currentAddress"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textCapCharacters"
+                    android:hint="@string/current_address_proof"
+                    android:layout_gravity="center"
+                    android:maxLength="15"
+                    android:digits="@string/alphabetNumeric"/>
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearlayoutWeightStyle"
+            android:layout_weight="0.5"
+            android:gravity="center">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="@dimen/dimen50dp"
+                android:layout_height="70dp"
+                android:layout_margin="@dimen/mar_padd_10dp">
+
+                <ImageView
+                    android:id="@+id/guardianCurrentAddressProofFrontClick"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/whitecolor"
+                    android:src="@drawable/attach2"
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/guardianCurrentAddressProofFront"
+                    android:layout_width="@dimen/dimen70dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/whitecolor"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    tools:ignore="ContentDescription" />
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="@dimen/dimen50dp"
+                android:layout_height="70dp"
+                android:layout_margin="@dimen/mar_padd_10dp">
+
+                <ImageView
+                    android:id="@+id/guardianCurrentAddressProofBackClick"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/whitecolor"
+                    android:src="@drawable/attach2"
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/guardianCurrentAddressProofBack"
+                    android:layout_width="@dimen/dimen70dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/whitecolor"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    tools:ignore="ContentDescription" />
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

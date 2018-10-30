@@ -1,0 +1,467 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ScrollViewStyle">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/LinearLayoutStyle"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            style="@style/LinearLayoutStyle"
+            android:id="@+id/layoutForMedicalInfo"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextViewStyle1"
+                android:text="@string/health_information"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/whitecolor"/>
+
+            <LinearLayout
+                style="@style/LinearLayoutStyle"
+                android:orientation="horizontal"
+                android:padding="@dimen/mar_padd_5dp"
+                android:baselineAligned="false">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/TextInputLayout"
+                    android:layout_weight="2"
+                    android:layout_width="0dp">
+
+                    <EditText
+                        style="@style/EditTextStyle"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:hint="@string/height"
+                        android:id="@+id/student_height"
+                        tools:ignore="TextFields" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    style="@style/LinearlayoutWeightStyle"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <Spinner
+                        style="@style/SpinnerStyleA"
+                        android:background="@drawable/custom_spinner_background"
+                        android:id="@+id/spinnerForHeight"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/mar_padd_5dp"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/LinearlayoutWeightStyle"
+                    android:layout_weight="1">
+
+                    <Button
+                        style="@style/SpinnerStyleA"
+                        android:background="@drawable/custom_spinner_background"
+                        android:id="@+id/heightUnit"
+                        android:layout_gravity="center"
+                        android:text="@string/centimeter"
+                        android:clickable="false"
+                        android:layout_margin="@dimen/mar_padd_5dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/LinearLayoutStyle"
+                android:orientation="horizontal"
+                android:padding="@dimen/mar_padd_5dp"
+                android:baselineAligned="false">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/TextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_weight="2">
+
+                    <EditText
+                        android:id="@+id/student_weight"
+                        style="@style/EditTextStyle"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:hint="@string/weight"
+                        tools:ignore="TextFields"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    style="@style/LinearlayoutWeightStyle"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <Spinner
+                        style="@style/SpinnerStyleA"
+                        android:background="@drawable/custom_spinner_background"
+                        android:id="@+id/spinnerForWeight"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/mar_padd_5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/LinearlayoutWeightStyle"
+                    android:layout_weight="1">
+
+                    <Button
+                        style="@style/SpinnerStyleA"
+                        android:background="@drawable/custom_spinner_background"
+                        android:id="@+id/weightUnit"
+                        android:layout_gravity="center"
+                        android:text="@string/kilogram"
+                        android:clickable="false"
+                        android:layout_margin="@dimen/mar_padd_5dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextViewStyle1"
+                android:text="@string/eye"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@color/colorPrimary"
+                android:layout_margin="@dimen/mar_padd_1dp"
+                android:textColor="@color/whitecolor"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/TextInputLayout"
+                android:padding="@dimen/mar_padd_5dp">
+
+                <EditText
+                    android:id="@+id/leftEyeVision"
+                    style="@style/EditTextStyle"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:hint="@string/left_eye_vision"
+                    android:digits="@string/EyeVision"
+                    android:maxLength="5"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/TextInputLayout"
+                android:padding="@dimen/mar_padd_5dp">
+
+                <EditText
+                    android:id="@+id/rightEyeVision"
+                    style="@style/EditTextStyle"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:hint="@string/right_eye_vision"
+                    android:digits="@string/EyeVision"
+                    android:maxLength="5"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <LinearLayout
+                style="@style/LinearLayoutStyle"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_margin="@dimen/mar_padd_5dp"
+                android:background="@drawable/rect_border_shape">
+
+                <TextView
+                    style="@style/TextViewStyle1"
+                    android:layout_width="wrap_content"
+                    android:text="@string/color_vision"
+                    android:layout_gravity="center"
+                    android:textColor="#125927"
+                    android:textStyle="bold"/>
+
+                <Button
+                    style="@style/buttonStyle"
+                    android:id="@+id/colorVision_btnYes"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/hintColor"
+                    android:text="@string/yes"
+                    />
+
+                <Button
+                    style="@style/buttonStyle"
+                    android:id="@+id/colorVision_btnNo"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/hintColor"
+                    android:text="@string/no"
+                    android:layout_marginStart="@dimen/mar_padd_2dp"/>
+
+            </LinearLayout>
+
+            <!--<EditText
+                android:id="@+id/editTextForColorVision"
+                style="@style/EditTextStyle"
+                android:inputType="text"
+                android:hint="@string/if_yes_then_comments"
+                android:visibility="gone"/>-->
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/mar_padd_2dp"
+                style="@style/LinearLayoutStyle"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/TextViewStyle1"
+                    android:layout_width="wrap_content"
+                    android:text="@string/wear_glass"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/text19sp"/>
+
+                <Button
+                    style="@style/buttonStyle"
+                    android:id="@+id/wearGlasses_btnYes"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/hintColor"
+                    android:text="@string/yes"
+                    />
+
+                <Button
+                    style="@style/buttonStyle"
+                    android:id="@+id/wearGlasses_btnNo"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/hintColor"
+                    android:text="@string/no"
+                    android:layout_marginStart="@dimen/mar_padd_2dp"/>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/TextInputLayout"
+                android:padding="@dimen/mar_padd_5dp">
+                <EditText
+                    android:id="@+id/commentsOnEyes"
+                    style="@style/EditTextStyle"
+                    android:inputType="text"
+                    android:hint="@string/comments_on_eye"
+                    android:digits="@string/alphabetSpace"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <TextView
+                style="@style/TextViewStyle1"
+                android:text="@string/teeth"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@color/colorPrimary"
+                android:layout_margin="@dimen/mar_padd_1dp"
+                android:textColor="@color/whitecolor"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                tools:ignore="TooManyViews">
+
+                <CheckBox
+                    android:id="@+id/checkbox_cavity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cavity"
+                    android:textColor="@color/textColor"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_sensivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sensivity"
+                    android:textColor="@color/textColor"
+                    android:layout_marginEnd="5dp"/>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/TextInputLayout"
+                android:padding="@dimen/mar_padd_5dp">
+                <EditText
+                    android:id="@+id/commentsOnTeeth"
+                    style="@style/EditTextStyle"
+                    android:inputType="text"
+                    android:hint="@string/comments_on_teeth"
+                    android:digits="@string/alphabetSpace"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <TextView
+                style="@style/TextViewStyle1"
+                android:text="@string/ear"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@color/colorPrimary"
+                android:layout_margin="@dimen/mar_padd_1dp"
+                android:textColor="@color/whitecolor"/>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/TextInputLayout"
+                android:padding="@dimen/mar_padd_5dp">
+
+                <EditText
+                    android:id="@+id/rightEarFreq"
+                    style="@style/EditTextStyle"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:hint="@string/right_ear_frequency"
+                    android:digits="@string/EyeVision"
+                    android:maxLength="5"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/TextInputLayout"
+                android:padding="@dimen/mar_padd_5dp">
+
+                <EditText
+                    android:id="@+id/leftEarFreq"
+                    style="@style/EditTextStyle"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:hint="@string/left_ear_frequency"
+                    android:digits="@string/EyeVision"
+                    android:maxLength="5"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <LinearLayout
+                style="@style/LinearLayoutStyle"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_margin="@dimen/mar_padd_5dp"
+                android:background="@drawable/rect_border_shape">
+
+                <TextView
+                    style="@style/TextViewStyle1"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/hearing_difficulty"
+                    android:textColor="#125927"
+                    android:textStyle="bold"/>
+
+
+
+                <Button
+                    style="@style/buttonStyle"
+                    android:id="@+id/hearing_btnYes"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/hintColor"
+                    android:text="@string/yes"
+                    />
+
+                <Button
+                    style="@style/buttonStyle"
+                    android:id="@+id/hearing_btnNo"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/hintColor"
+                    android:text="@string/no"
+                    android:layout_marginStart="@dimen/mar_padd_2dp"/>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/TextInputLayout"
+                android:padding="@dimen/mar_padd_5dp">
+                <EditText
+                    android:id="@+id/commentsOnEar"
+                    style="@style/EditTextStyle"
+                    android:inputType="text"
+                    android:hint="@string/comments_on_ear"
+                    android:digits="@string/alphabetSpace"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <TextView
+                style="@style/TextViewStyle1"
+                android:text="@string/disability"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@color/colorPrimary"
+                android:layout_margin="@dimen/mar_padd_1dp"
+                android:textColor="@color/whitecolor"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                tools:ignore="TooManyViews">
+
+                <CheckBox
+                    android:id="@+id/checkbox_visualDisability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/visual"
+                    android:textColor="@color/textColor"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_Hearing_speechDisability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hearing"
+                    android:textColor="@color/textColor"
+                    android:layout_marginEnd="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                tools:ignore="TooManyViews">
+
+                <CheckBox
+                    android:id="@+id/checkbox_physicalDisability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/physical"
+                    android:textColor="@color/textColor"
+                    android:layout_marginEnd="5dp"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_none"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/speech"
+                    android:textColor="@color/textColor"
+                    android:layout_marginEnd="5dp"/>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/TextInputLayout"
+                android:padding="@dimen/mar_padd_5dp">
+                <EditText
+
+                    android:id="@+id/commentsOnDisability"
+                    style="@style/EditTextStyle"
+                    android:inputType="text"
+                    android:hint="@string/comments_on_disability"
+                    android:digits="@string/alphabetSpace"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnMedicalSubmit"
+            style="@style/ButtonStyleWithColorChange"
+            android:background="@drawable/button_design"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:text="@string/submit"
+            android:textColor="@color/whitecolor"
+            android:layout_margin="@dimen/mar_padd_10dp"/>
+
+
+    </LinearLayout>
+</ScrollView>
